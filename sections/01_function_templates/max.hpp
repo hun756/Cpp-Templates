@@ -1,3 +1,6 @@
+#ifndef MAX_HPP
+#define MAX_HPP
+
 #include <type_traits>
 
 namespace myTemplates {
@@ -52,3 +55,5 @@ namespace myTemplates {
     }
 
 }
+
+#endif /* end of include guard : MAX_HPP */
