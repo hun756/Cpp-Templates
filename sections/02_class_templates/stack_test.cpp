@@ -84,6 +84,7 @@ namespace Test {
         return exceptcheck;
     }
 
+
     bool testCase003_testEmptyStackTop() {
         bool exceptcheck = false;
         myTemplate::Stack<int> myStack;
@@ -97,8 +98,8 @@ namespace Test {
         return exceptcheck;
     }
 
+
     bool testCase004_testStackWithPrimitiveTypes() {
-        bool check = true;
         myTemplate::Stack<int> myStack;
         std::vector<int>  myTestVec {5, 8, 7, 23, 43, 654, 42, 43};
 
@@ -111,8 +112,9 @@ namespace Test {
             myTestVec.push_back(myStack.top());
             myStack.pop();
         }
-        return assertEqual(myTestVec, std::vector<int>({43,42,654,43,23,7,8,5}));
+        return assertEqual(myTestVec, std::vector<int>({43, 42, 654, 43, 23, 7, 8, 5}));
     }
+
 
     bool testCase005_testStackWithUserDefinesTypes() {
         /**
@@ -133,10 +135,12 @@ namespace Test {
             }
             
 
-        public:
+        private:
             std::string nv;
             short val;
         };
+
+        
         bool check = true;
         std::vector<MyTestClass> myTestVec;
         myTemplate::Stack<MyTestClass> myStack;
